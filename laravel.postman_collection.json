@@ -1,0 +1,138 @@
+{
+	"info": {
+		"_postman_id": "34f879e5-ef12-43bf-9076-628ffec17a2b",
+		"name": "laravel",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "25202787"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/register?name=basanta&email=basanta@gmail.com&password=abc@gmail.com&Authorized=Fa0g4S0MBNAUVUucU9KNOmp6hYPkTTKpCZWDJ9XImkyPgV3OcrCBzc3mCBS0lmIF",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"register"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "basanta"
+						},
+						{
+							"key": "email",
+							"value": "basanta@gmail.com"
+						},
+						{
+							"key": "password",
+							"value": "abc@gmail.com"
+						},
+						{
+							"key": "Authorized",
+							"value": "Fa0g4S0MBNAUVUucU9KNOmp6hYPkTTKpCZWDJ9XImkyPgV3OcrCBzc3mCBS0lmIF"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "basanta@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "abc@gmail.com",
+							"type": "text"
+						}
+					]
+				},
+				"url": "http://127.0.0.1:8000/api/login"
+			},
+			"response": []
+		},
+		{
+			"name": "view blogs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://127.0.0.1:8000/api/blogs"
+			},
+			"response": []
+		},
+		{
+			"name": "create blogs",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Rest API\",\r\n    \"body\": \"Good to go\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/blogs"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Blog / put/patch",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"title\": \"Next js\",\r\n    \"body\": \"Good to go\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/blogs/4"
+			},
+			"response": []
+		},
+		{
+			"name": "delete blogs",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://127.0.0.1:8000/api/blogs/4"
+			},
+			"response": []
+		}
+	]
+}
